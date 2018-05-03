@@ -1,0 +1,64 @@
+.App {
+    text-align: left;
+}
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.content{
+    width: 480px;
+     margin: 0 auto;
+}
+.publish {
+    font-size: 12px;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+    line-height: 30px;
+}
+.createArticle {
+    cursor: pointer;
+    text-align: center;
+    color: #1955ff;
+    font-size: 14px;
+}
+.staus {
+    font-size: 14px;
+    padding: 0 10px;
+}
+.article {
+    margin-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.article input {
+    width: 454px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.article button {
+    margin-top: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 102px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    border: 0;
+    background: none;
+    background-color: #38f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.alist {
+    width: 400px;
+    margin: 0 auto;
+}
+.alist h2 {
+    font-size: 14px;
+}
