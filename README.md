@@ -16,7 +16,10 @@ Facebook OpenID OAuth
 
 ### Startup Mongo
 ```bash
+//new a named fbook package，startup mongo server
 ./bin/mongod --dbpath=fbook
+
+//startup mongo client
 ./bin/mongo
 ```
 
