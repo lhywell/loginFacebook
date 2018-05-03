@@ -4,6 +4,8 @@ In development, you need to embed a piece of code. This code loads and initializ
 
 Facebook need support HTTPS protocol,congfig in the system environment variables,HTTPS=TRUE，PORT=443,React can read about these configured environment variables.
 
+[img](https://raw.githubusercontent.com/lhywell/loginFacebook/master/facebook.gif)
+
 ### Startup mongo
 ```bash
 ./bin/mongod --dbpath=fbook
