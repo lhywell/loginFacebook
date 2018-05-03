@@ -8,10 +8,9 @@ module.exports = {
       .find()
       .exec()
   },
-  postArticles: function postArticles () {
-  	console.log(1212)
+  postArticles: function postArticles (title) {
     return Message
-      .insertOne({ title: 'sss'})
+      .insertOne({ title: title})
       .exec()
   }
 }

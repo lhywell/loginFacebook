@@ -20,13 +20,19 @@ router.get('/', function(req, res, next) {
 
 // Post 文章页列表
 router.post('/add', function(req, res, next) {
-	PostModel.postArticles()
+	console.log(1111,req.fields.title)
+	let title = req.fields.title;
+	PostModel.postArticles(title)
 		.then(function(posts) {
-			console.log(222)
-			// req.flash('success', '文章写入成功')
+			//允许跨域
+			res.header("Access-Control-Allow-Origin", "*");
+			res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+			res.header("Access-Control-Allow-Headers", "X-Requested-With");
+			res.header('Access-Control-Allow-Headers', 'Content-Type');
+			
 			res.json({
-				code:200,
-				data:'sucess'
+				code: 200,
+				msg: 'sucess'
 			})
 		})
 		.catch(next)
