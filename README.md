@@ -19,6 +19,7 @@ npm run server
 ### Start client
 run under the root directory 
 ```bash
+npm install
 npm start
 ```
 open https://localhost:444/
