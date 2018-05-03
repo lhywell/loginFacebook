@@ -1,38 +1,40 @@
 This project is use nodejs,mongo,and react to create a web application that allows a user to login to the Facebook application and post an article with a comment. The web app show a list of all the posts that were sent through the Facebook app.
 
-## Available Scripts
+In development, you need to embed a piece of code. This code loads and initializes the Javascript SDK. You must replace the value in your-app-id with the number of your Facebook open platform application. You can find this number through the application panel.
 
-In the project directory, you can run:
+Facebook need support HTTPS protocol,congfig in the system environment variables,HTTPS=TRUE，PORT=443,React can read about these configured environment variables.
 
-### `npm start`
+### Startup mongo
+```bash
+./bin/mongod --dbpath=fbook
+./bin/mongo
+```
 
-Runs the app in the development mode.<br>
-Open [https://localhost:444](https://localhost:444) to view it in the browser.
+### Startup server
+under the 'server' directory run
+```bash
+npm run server
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### start client
+under the 'server' directory run
+```bash
+npm start
+```
+open https://localhost:444/
 
-### `npm test`
+### Interface
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+domain:localhost:4000
 
-### `npm run build`
+* Query article list
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+GET
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+/list
 
-See the section about [deployment](#deployment) for more information.
+* Add the article
 
-### `npm run eject`
+POST
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+/list/add
