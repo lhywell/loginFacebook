@@ -11,13 +11,13 @@ Facebook need support HTTPS protocol,congfig in the system environment variables
 ```
 
 ### Startup server
-under the 'server' directory run
+run under the 'server' directory 
 ```bash
 npm run server
 ```
 
-### start client
-under the 'server' directory run
+### Start client
+run under the root directory 
 ```bash
 npm start
 ```
