@@ -6,27 +6,27 @@ Facebook need support HTTPS protocol,congfig in the system environment variables
 
 ![img](https://raw.githubusercontent.com/lhywell/loginFacebook/master/facebook.gif)
 
-### Startup mongo
+### Installation environment
+1. node V8.9.4
+2. mongo V3.4.10
+3. react V16.3.2
+
+### About login
+Facebook OpenID OAuth
+
+### Startup Mongo
 ```bash
 ./bin/mongod --dbpath=fbook
 ./bin/mongo
 ```
 
 ### Startup server
-run under the 'server' directory 
+run Node Server
 ```bash
 npm run server
 ```
-
-### Start client
-run under the root directory 
-```bash
-npm install
-npm start
-```
-open https://localhost:444/
-
 ### Interface
+Below is the interface that the backend provides to the front end.
 
 domain:localhost:4000
 
@@ -41,3 +41,15 @@ GET
 POST
 
 /list/add
+
+### Start client
+run under the root directory 
+```bash
+//install packages
+npm install
+
+//startup React
+npm start
+```
+open https://localhost:444/
+
