@@ -20,7 +20,6 @@ router.get('/', function(req, res, next) {
 
 // Post a message
 router.post('/add', function(req, res, next) {
-    console.log(1111, req.fields.title)
     let title = req.fields.title;
     PostModel.postArticles(title)
         .then(function(posts) {

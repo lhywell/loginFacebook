@@ -10,7 +10,6 @@ class postArticle extends Component {
     submitArticle() {
         //post a article
         let editInput = this.refs.editInput.value
-        console.log(editInput)
         let body = {
             title: editInput
         }
@@ -45,7 +44,7 @@ class postArticle extends Component {
     render() {
         return (
             <div className = "article">
-                <input type = "text" ref = "editInput" />
+                <input type="text" ref="editInput" />
                 <button onClick = {() => this.submitArticle()}>Post</button>
             </div>
         );
