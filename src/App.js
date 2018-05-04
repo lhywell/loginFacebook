@@ -19,7 +19,7 @@ class App extends Component {
                 this.setState({
                     fb: fb,
                 })
-                //facebook初始化一个用户编号
+                //facebook initial a appId
                 fb.init({
                     appId: '173394849991240',
                     autoLogAppEvents: true,
@@ -90,7 +90,7 @@ class App extends Component {
                         <button onClick = {() => this.myFacebookLogin()}>Login with Facebook</button>
                     </header>
                     <div className="content">
-                        <Link to="/article" className="publish">发表文章</Link>
+                        <Link to="/article" className="publish">Open</Link>
                         <Route path="/article" component={postArticle} />
                         <Route path="/" component={getArticles} />
                     </div>

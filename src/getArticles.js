@@ -35,7 +35,7 @@ class getArticles extends Component {
 
         return (
             <div className = "alist">
-                <h2>文章列表</h2>
+                <h2>Message List</h2>
                 <ul>{dom}</ul>
             </div>
         );

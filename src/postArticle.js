@@ -24,14 +24,14 @@ class postArticle extends Component {
                 success: function(data) {
                     if (data.code === 200) {
                         console.log(data.msg)
-                        //初始为空值
+                        //initial input value
                         that.refs.editInput.value = '';
                         window.location.reload();
                     }
                 }
             });
         });
-        //post到facebook
+        //post facebook
         // fb.api('/me/feed', 'post', {
         //   message: editInput
         // }, function(response) {
@@ -46,7 +46,7 @@ class postArticle extends Component {
         return (
             <div className = "article">
                 <input type = "text" ref = "editInput" />
-                <button onClick = {() => this.submitArticle()}> post a article </button>
+                <button onClick = {() => this.submitArticle()}>Post</button>
             </div>
         );
     }
