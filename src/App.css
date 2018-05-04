@@ -6,9 +6,9 @@
     align-items: flex-end;
     justify-content: flex-end;
 }
-.content{
+.content {
     width: 480px;
-     margin: 0 auto;
+    margin: 0 auto;
 }
 .publish {
     font-size: 12px;
@@ -61,4 +61,11 @@
 }
 .alist h2 {
     font-size: 14px;
+}
+#dataLog {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    color: #aaa;
+    font-size: 13px;
 }

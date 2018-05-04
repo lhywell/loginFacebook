@@ -23,8 +23,7 @@ Facebook OpenID OAuth
 ./bin/mongo
 ```
 
-### Startup server
-run Node Server
+### Startup Node server
 ```bash
 npm run server
 ```

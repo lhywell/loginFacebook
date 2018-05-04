@@ -20,6 +20,7 @@ class App extends Component {
                     fb: fb,
                 })
                 //facebook initial a appId
+                this.addMessage('Initial a appId');
                 fb.init({
                     appId: '173394849991240',
                     autoLogAppEvents: true,
@@ -34,6 +35,7 @@ class App extends Component {
         console.log(this.state.fb)
         if (fb) {
             //Check the user login status.
+            this.addMessage('Check the user login status');
             fb.getLoginStatus((response) => {
                 this.statusChangeCallback(response);
             });
@@ -46,6 +48,8 @@ class App extends Component {
             this.loginSuccess();
         } else {
             // The person is not logged into your app.Let the user login.
+            this.addMessage('Login');
+
             fb.login((response) => {
                 console.log(response)
                 this.loginSuccess();
@@ -57,29 +61,18 @@ class App extends Component {
     loginSuccess() {
         //login success and display the input box and get the user name
         let fb = this.state.fb;
-        console.log('Welcome!  Fetching your information.... ');
+        this.addMessage('Welcome!  Fetching your information.... ');
         fb.api('/me', (response) => {
             this.setState({
                 visible: true,
             })
-            console.log('Successful login for: ' + response.name);
+            this.addMessage('Successful login for: ' + response.name);
             document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
         });
     }
-    postArticle() {
-        //post a article
-        let fb = this.state.fb;
-        let editInput = this.refs.editInput.value
-        console.log(editInput)
-        fb.api('/me/feed', 'post', {
-            message: editInput
-        }, function(response) {
-            if (!response || response.error) {
-                alert('Error occured');
-            } else {
-                alert('Post ID: ' + response.id);
-            }
-        });
+    addMessage(message) {
+        let dataLog = document.getElementById('dataLog');
+        dataLog.insertAdjacentHTML("beforeEnd", '<div>' + message + '</div>');
     }
     render() {
         return (
@@ -94,6 +87,7 @@ class App extends Component {
                         <Route path="/article" component={postArticle} />
                         <Route path="/" component={getArticles} />
                     </div>
+                    <div id="dataLog"></div>
                 </div>
             </Router>
         );
